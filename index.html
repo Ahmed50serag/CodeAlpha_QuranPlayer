@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <!-- css -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+        <h1>القرآن الكريم</h1>
+        <p>بصوت الشيخ ياسر الدوسري</p>
+            <div class="search-box">
+        <input type="text" id="searchInput" placeholder="ابحث عن سورة...">
+        <span>🔍</span>
+    </div>
+    </header>
+    <main>
+        <!-- Player -->
+        <section class="player">
+            <img src="Images/quran.jpeg" alt="Quran">
+            <h2 id="surahTitle">سورة الفاتحة</h2>
+            <p id="artist">الشيخ ياسر الدوسري</p>
+            <!-- Audio -->
+            <audio id="audioPlayer"></audio>
+            <!-- Progress -->
+            <div class="progress-container">
+                <span id="currentTime">00:00</span>
+                <input  type="range"  id="progressBar" 
+                    value="0"
+                    min="0"
+                    max="100"
+                >
+                <span id="duration">00:00</span>
+            </div>
+            <!-- Controls -->
+            <div class="controls">
+                <button id="previousBtn">
+                    ⏮
+                </button>
+                <button id="playBtn">
+                    ▶
+                </button>
+                <button id="nextBtn">
+                    ⏭
+                </button>
+            </div>
+            <!-- Volume -->
+            <div class="volume">
+                <span>🔊</span>
+                <input 
+                    type="range"
+                    id="volumeBar"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                >
+            </div>
+        </section>
+        <!-- Playlist -->
+        <section class="playlist">
+            <h2>قائمة السور</h2>
+            <div id="surahList"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
