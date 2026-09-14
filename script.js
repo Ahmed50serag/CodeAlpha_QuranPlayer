@@ -115,7 +115,7 @@ const surahs = [
     "الفلق",
     "الناس"
 ];
-//    Elements
+// Elements
 const audioPlayer = document.getElementById("audioPlayer");
 const playBtn = document.getElementById("playBtn");
 const previousBtn = document.getElementById("previousBtn");
