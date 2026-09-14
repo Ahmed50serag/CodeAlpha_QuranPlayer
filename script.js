@@ -170,7 +170,9 @@ searchInput.addEventListener("input", function () {
 function loadSurah(index) {
     currentSurahIndex = index;
     const surahNumber = String(index + 1).padStart(3, "0");
-    audioPlayer.src = `Music/${surahNumber}.mp3`;
+    // audioPlayer.src = `Music/${surahNumber}.mp3`;
+    // audioPlayer.src = "https://archive.org/download/Yasser_Aldosari_MP3_Quran/001.mp3";
+    audioPlayer.src = `https://archive.org/download/Yasser_Aldosari_MP3_Quran/${surahNumber}.mp3`;
     surahTitle.textContent = `سورة ${surahs[index]}`;
     updateActiveSurah();
     audioPlayer.load();
